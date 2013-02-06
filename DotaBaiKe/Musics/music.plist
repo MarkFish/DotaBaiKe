@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>First Blood(第一滴血)</string>
+		<key>description</key>
+		<string>游戏中杀死第一个英雄</string>
+		<key>file</key>
+		<string>kill_ring_01.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Double Kill(双杀)</string>
+		<key>description</key>
+		<string>在11.5秒内连续杀死2个英雄</string>
+		<key>file</key>
+		<string>kill_ring_02.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Triple Kill(三杀)</string>
+		<key>description</key>
+		<string>在11.5秒内连续杀死3个英雄</string>
+		<key>file</key>
+		<string>kill_ring_03.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Ultra Kill(四杀)</string>
+		<key>description</key>
+		<string>在11.5秒内连续杀死4个英雄</string>
+		<key>file</key>
+		<string>kill_ring_04.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Rampage(五杀)</string>
+		<key>description</key>
+		<string>在11.5秒内连续杀死5个英雄</string>
+		<key>file</key>
+		<string>kill_ring_05.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Owning</string>
+		<key>description</key>
+		<string>当一个队伍杀死5个或更多的对方英雄而己方没有伤亡时</string>
+		<key>file</key>
+		<string>kill_ring_06.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Killing Spree(大杀特杀)</string>
+		<key>description</key>
+		<string>杀人数达到3个而且期间没有被终结</string>
+		<key>file</key>
+		<string>kill_ring_07.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Dominating(主宰比赛)</string>
+		<key>description</key>
+		<string>杀人数达到4个而且期间没有被终结</string>
+		<key>file</key>
+		<string>kill_ring_08.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Mega-Kill(杀人如麻)</string>
+		<key>description</key>
+		<string>杀人数达到5个而且期间没有被终结</string>
+		<key>file</key>
+		<string>kill_ring_09.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Unstoppable(无人能挡)</string>
+		<key>description</key>
+		<string>杀人数达到6个而且期间没有被终结</string>
+		<key>file</key>
+		<string>kill_ring_10.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Wicked Sick(变态杀戮)</string>
+		<key>description</key>
+		<string>杀人数达到7个而且期间没有被终结</string>
+		<key>file</key>
+		<string>kill_ring_11.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>M-m-m...Monster Kill(妖怪般地杀戮)</string>
+		<key>description</key>
+		<string>杀人数达到8个而且期间没有被终结</string>
+		<key>file</key>
+		<string>kill_ring_12.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Godlike(神一般的杀戮)</string>
+		<key>description</key>
+		<string>杀人数达到9个而且期间没有被终结</string>
+		<key>file</key>
+		<string>kill_ring_13.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Holy Shit(超神杀戮)</string>
+		<key>description</key>
+		<string>杀人数达到10个而且期间没有被终结</string>
+		<key>file</key>
+		<string>kill_ring_14.mp3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>全部顺序播放</string>
+		<key>description</key>
+		<string>一血 --&gt; 超神</string>
+		<key>file</key>
+		<string>kill_ring_15.mp3</string>
+	</dict>
+</array>
+</plist>

@@ -15,4 +15,9 @@
 // iPhone 5适配相关
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
+// Mark Name
+#define MarkName @"Mark Studio"
+// Map Version
+#define MAP_VERSION @"v6.76c"
+
 #endif
