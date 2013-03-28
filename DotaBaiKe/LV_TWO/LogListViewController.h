@@ -10,9 +10,11 @@
 
 @interface LogListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
+    NSDictionary    *dicData;
     UITableView     *tabView;
 }
 
+@property (nonatomic, retain) NSDictionary  *dicData;
 @property (nonatomic, retain) UITableView   *tabView;
 
 @end

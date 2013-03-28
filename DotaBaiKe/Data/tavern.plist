@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>力量英雄(近卫酒馆-1)Sentinel Strength 1</string>
+	<string>力量英雄(近卫酒馆-2)Sentinel Strength 2</string>
+	<string>力量英雄(天灾酒馆-1)Scourge Strength 1</string>
+	<string>力量英雄(天灾酒馆-2)Scourge Strength 2</string>
+	<string>敏捷英雄(近卫酒馆-1)Sentinel Agility 1</string>
+	<string>敏捷英雄(近卫酒馆-2)Sentinel Agility 2</string>
+	<string>敏捷英雄(天灾酒馆-1)Scourge Agility 1</string>
+	<string>敏捷英雄(天灾酒馆-2)Scourge Agility 2</string>
+	<string>智力英雄(近卫酒馆-1)Sentinel Intelligence 1</string>
+	<string>智力英雄(近卫酒馆-2)Sentinel Intelligence 2</string>
+	<string>智力英雄(天灾酒馆-1)Scourge Intelligence 1</string>
+	<string>智力英雄(天灾酒馆-2)Scourge Intelligence 2</string>
+</array>
+</plist>

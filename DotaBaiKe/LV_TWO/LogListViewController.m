@@ -7,20 +7,24 @@
 //
 
 #import "LogListViewController.h"
+#import "LogDetailViewController.h"
 
 @interface LogListViewController ()
 
 - (void)btnNavLeftClick:(id)sender;
 - (void)loadMainView;
+- (void)initData;
     
 @end
 
 @implementation LogListViewController
 
+@synthesize dicData;
 @synthesize tabView;
 
 - (void)dealloc
 {
+    [dicData release];
     [tabView release];
     
     [super dealloc];
@@ -32,6 +36,7 @@
     if (self)
     {
         [self setTitle:@"日志改动"];
+        [self initData];
     }
     return self;
 }
@@ -81,13 +86,39 @@
     return;
 }// loadMainView
 
+- (void)initData
+{
+    if (dicData == nil)
+    {
+        NSString *strPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"logdata.plist"];
+        dicData = [[NSDictionary alloc] initWithContentsOfFile:strPath];
+    }
+    
+    return;
+}// initData
+
 #pragma mark -
 #pragma mark UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return dicData.count;
+}// numberOfSectionsInTableView:
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    NSArray *arrVers = [dicData allKeys];
+    
+    return [[dicData objectForKey:[arrVers objectAtIndex:section]] count];
+    
 }// tableView:numberOfRowsInSection:
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSArray *arrVers = [dicData allKeys];
+    
+    return [NSString stringWithFormat:@"%@系列", [arrVers objectAtIndex:section]];
+}// tableView:titleForHeaderInSection:
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -96,7 +127,12 @@
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        [cell.textLabel setFont:[UIFont systemFontOfSize:15.0f]];
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
+    NSArray *arrTMP = [dicData objectForKey:[[dicData allKeys] objectAtIndex:indexPath.section]];
+    NSDictionary *dicTMP = [arrTMP objectAtIndex:indexPath.row];
+    [cell.textLabel setText:[dicTMP objectForKey:@"subversion"]];
     
     return cell;
 }// tableView:cellForRowAtIndexPath:
@@ -104,6 +140,15 @@
 #pragma mark -
 #pragma mark UITableViewDelegate
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSArray *arrTMP = [dicData objectForKey:[[dicData allKeys] objectAtIndex:indexPath.section]];
+    NSDictionary *dicTMP = [arrTMP objectAtIndex:indexPath.row];
+    LogDetailViewController *detailViewController = [[[LogDetailViewController alloc] initWithInfo:dicTMP] autorelease];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    
+    return;
+}// tableView:didSelectRowAtIndexPath:
 
 @end

@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface MusicListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
+    NSArray         *arrData;
     UITableView     *tabView;
+    AVAudioPlayer   *musicPlayer;
 }
 
+@property (nonatomic, retain) NSArray       *arrData;
 @property (nonatomic, retain) UITableView   *tabView;
+@property (nonatomic, retain) AVAudioPlayer *musicPlayer;
 
 @end

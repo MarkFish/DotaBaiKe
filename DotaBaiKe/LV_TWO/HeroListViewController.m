@@ -11,10 +11,23 @@
 @interface HeroListViewController ()
 
 - (void)btnNavLeftClick:(id)sender;
+- (void)initData;
+- (void)loadMainView;
 
 @end
 
 @implementation HeroListViewController
+
+@synthesize arrHotel;
+@synthesize tabView;
+
+- (void)dealloc
+{
+    [arrHotel release];
+    [tabView release];
+    
+    [super dealloc];
+}// dealloc
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +35,7 @@
     if (self)
     {
         [self setTitle:@"英雄资料"];
+        [self initData];
     }
     return self;
 }
@@ -42,6 +56,8 @@
     [btnLeft release];
     [self.navigationItem setLeftBarButtonItem:barItemLeft];
     [barItemLeft release];
+    // Load main view
+    [self loadMainView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,5 +75,56 @@
     
     return;
 }// btnNavLeftClick:
+
+- (void)initData
+{
+    NSString *strPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"hotel.plist"];
+    arrHotel = [[NSArray alloc] initWithContentsOfFile:strPath];
+    
+    return;
+}// initData
+
+- (void)loadMainView
+{
+    tabView = [[UITableView alloc] initWithFrame:CGRectMake(0.0f,
+                                                            0.0f,
+                                                            self.view.bounds.size.width,
+                                                            self.view.bounds.size.height-44.0f)
+                                           style:UITableViewStylePlain];
+    [tabView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [tabView setBackgroundColor:[UIColor clearColor]];
+    [tabView setDataSource:self];
+    [tabView setDelegate:self];
+    [self.view addSubview:tabView];
+    
+    return;
+}// loadMainView
+
+#pragma mark -
+#pragma mark UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return arrHotel.count;
+}// tableView:numberOfRowsInSection:
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifier = @"aCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    [cell.textLabel setTextColor:[UIColor whiteColor]];
+    [cell.textLabel setText:[arrHotel objectAtIndex:indexPath.row]];
+    
+    return cell;
+}// tableView:cellForRowAtIndexPath:
+
+#pragma mark -
+#pragma mark UITableViewDelegate
+
+
 
 @end

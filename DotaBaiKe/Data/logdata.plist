@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>6.67</key>
+	<array>
+		<dict>
+			<key>subversion</key>
+			<string>6.76</string>
+			<key>article</key>
+			<string>log_article_6.76.dat</string>
+			<key>hero</key>
+			<string>log_hero_6.76.dat</string>
+			<key>game</key>
+			<string>log_gameplay_6.76.dat</string>
+		</dict>
+		<dict>
+			<key>subversion</key>
+			<string>6.76b</string>
+			<key>article</key>
+			<string>log_article_6.76b.dat</string>
+			<key>hero</key>
+			<string>log_hero_6.76b.dat</string>
+			<key>game</key>
+			<string>log_gameplay_6.76b.dat</string>
+		</dict>
+		<dict>
+			<key>subversion</key>
+			<string>6.76c</string>
+			<key>article</key>
+			<string>log_article_6.76c.dat</string>
+			<key>hero</key>
+			<string>log_hero_6.76c.dat</string>
+			<key>game</key>
+			<string>log_gameplay_6.76c.dat</string>
+		</dict>
+	</array>
+</dict>
+</plist>
